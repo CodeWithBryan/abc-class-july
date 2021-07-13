@@ -1,5 +1,8 @@
-<ul>
-    <li *ngFor="let video of videos">
-        {{ video.title }} - {{ video.author }}
-    </li>
-</ul>
+<div
+    class="card teal"
+    *ngFor="let video of videos"
+    (click)="selectedVideo = video.id"
+    [class.lighten-4]="selectedVideo !== video.id"
+>
+    {{ video.title }} - {{ video.author }}
+</div>

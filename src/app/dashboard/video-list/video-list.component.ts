@@ -9,6 +9,8 @@ import { Video } from 'src/app/app-types';
 export class VideoListComponent implements OnInit {
   constructor() {}
 
+  selectedVideo: string | undefined;
+
   videos: Video[] = [
     {
       title: 'Angular Observable Data Flow',

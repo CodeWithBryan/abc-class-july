@@ -1,8 +1,6 @@
-<div
-    class="card teal"
+<app-video-card
     *ngFor="let video of videos"
+    [video]="video"
+    [isSelected]="selectedVideo === video.id"
     (click)="selectedVideo = video.id"
-    [class.lighten-4]="selectedVideo !== video.id"
->
-    {{ video.title }} - {{ video.author }}
-</div>
+></app-video-card>
